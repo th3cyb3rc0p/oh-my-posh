@@ -26,7 +26,7 @@ $global:ThemeSettings = New-Object -TypeName PSObject -Property @{
         SegmentBackwardSymbol            = [char]::ConvertFromUtf32(0x26A1)
         SegmentSeparatorForwardSymbol    = [char]::ConvertFromUtf32(0x26A1)
         SegmentSeparatorBackwardSymbol   = [char]::ConvertFromUtf32(0x26A1)
-        PathSeparator                    = '\'
+        PathSeparator                    = [System.IO.Path]::DirectorySeparatorChar
         VirtualEnvSymbol                 = [char]::ConvertFromUtf32(0xE606)
     }
     Colors                           = @{
