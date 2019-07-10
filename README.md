@@ -6,7 +6,7 @@
 [![Gitter][gitter-badge]][gitter]
 [![PS Gallery][psgallery-badge]][powershell-gallery]
 
-## Support this ❤
+## ❤ Support ❤
 
 [![Patreon][patreon-badge]][patreon]
 [![Liberapay][liberapay-badge]][liberapay]
