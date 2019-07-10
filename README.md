@@ -50,6 +50,15 @@ You should use ConEmu to have a brilliant terminal experience on Windows. You ca
 choco install ConEmu
 ```
 
+You can also install it using [Scoop][scoop] via the [extras bucket][scoop-extras]:
+
+```bash
+$ scoop search conemu
+'extras' bucket:
+  conemu (18.xx.xx)
+$ scoop install conemu
+```
+
 The fonts I use are Powerline fonts, there is a great [repository][nerdfonts] containing them.
 I use `Meslo LG M Regular for Powerline Nerd Font` in my ConEmu setup together with custom colors. You can find my theme [here][theme-gist].
 
@@ -225,6 +234,8 @@ Happy theming!
 [liberapay]: https://liberapay.com/jandedobbeleer
 [kofi-badge]: https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee!-%2346b798.svg
 [kofi]: https://ko-fi.com/jandedobbeleer
+[scoop]: https://scoop.sh/
+[scoop-extras]: https://github.com/lukesampson/scoop/wiki/Buckets
 [chrisbenti-psconfig]: https://github.com/chrisbenti/PS-Config
 [keithdahlby-poshgit]: https://github.com/dahlbyk/posh-git
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
