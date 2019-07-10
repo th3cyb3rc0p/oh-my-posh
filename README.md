@@ -6,6 +6,12 @@
 [![Gitter][gitter-badge]][gitter]
 [![PS Gallery][psgallery-badge]][powershell-gallery]
 
+## Support this ❤
+
+[![Patreon][patreon-badge]][patreon]
+[![Liberapay][liberapay-badge]][liberapay]
+[![Ko-Fi][kofi-badge]][kofi]
+
 ## Table of Contents
 
 * [About](#about)
@@ -213,6 +219,12 @@ Happy theming!
 [gitter]: https://gitter.im/oh-my-posh/general?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
 [psgallery-badge]: https://img.shields.io/powershellgallery/dt/oh-my-posh.svg
 [powershell-gallery]: https://www.powershellgallery.com/packages/oh-my-posh/
+[patreon-badge]: https://img.shields.io/badge/Support-Become%20a%20Patreon!-red.svg
+[patreon]: https://www.patreon.com/jandedobbeleer
+[liberapay-badge]: https://img.shields.io/badge/Liberapay-Donate-%23f6c915.svg
+[liberapay]: https://liberapay.com/jandedobbeleer
+[kofi-badge]: https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee!-%2346b798.svg
+[kofi]: https://ko-fi.com/jandedobbeleer
 [chrisbenti-psconfig]: https://github.com/chrisbenti/PS-Config
 [keithdahlby-poshgit]: https://github.com/dahlbyk/posh-git
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
