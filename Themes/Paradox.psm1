@@ -21,7 +21,7 @@ function Write-Theme {
         $prompt += Write-Prompt -Object "$($sl.PromptSymbols.ElevatedSymbol) " -ForegroundColor $sl.Colors.AdminIconForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
     }
 
-    $user = [System.Environment]::UserName
+    $user = $sl.CurrentUser
     $computer = [System.Environment]::MachineName
     $path = Get-FullPath -dir $pwd
     if (Test-NotDefaultUser($user)) {

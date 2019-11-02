@@ -9,7 +9,7 @@ function Write-Theme
 		$with
 	)
 
-	$user = [System.Environment]::UserName
+	$user = $s1.CurrentUser
 	$prompt = Write-Prompt -Object "$user " -ForegroundColor $s1.Colors.PromptForegroundColor
 	$prompt += Write-Prompt -Object ":: " -ForegroundColor $s1.Colors.AdminIconForegroundColor
 	$prompt += Write-Prompt -Object "$(Get-FullPath -dir $pwd) " -ForegroundColor $s1.Colors.DriveForegroundColor

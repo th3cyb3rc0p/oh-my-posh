@@ -1,9 +1,10 @@
 # Oh-My-Posh default settings
 $global:ThemeSettings = New-Object -TypeName PSObject -Property @{
-    CurrentThemeLocation             = "$PSScriptRoot\Themes\Agnoster.psm1"
-    MyThemesLocation                 = (Join-Path (Split-Path -Parent $PROFILE) "PoshThemes")
-    ErrorCount                       = 0
-    GitSymbols                       = @{
+    CurrentUser          = [System.Environment]::UserName
+    CurrentThemeLocation = "$PSScriptRoot\Themes\Agnoster.psm1"
+    MyThemesLocation     = (Join-Path (Split-Path -Parent $PROFILE) "PoshThemes")
+    ErrorCount           = 0
+    GitSymbols           = @{
         BranchSymbol                  = [char]::ConvertFromUtf32(0xE0A0)
         BeforeStashSymbol             = '{'
         BeforeIndexSymbol             = ''
@@ -17,25 +18,25 @@ $global:ThemeSettings = New-Object -TypeName PSObject -Property @{
         BranchIdenticalStatusToSymbol = [char]::ConvertFromUtf32(0x2263)
         BranchAheadStatusSymbol       = [char]::ConvertFromUtf32(0x2191)
         BranchBehindStatusSymbol      = [char]::ConvertFromUtf32(0x2193)
-        OriginSymbols                    = @{
-            Enabled                         = $false
-            Github                    = [char]::ConvertFromUtf32(0xF09B)
-            Bitbucket                 = [char]::ConvertFromUtf32(0xF171)
-            GitLab                    = [char]::ConvertFromUtf32(0xF296)
+        OriginSymbols                 = @{
+            Enabled   = $false
+            Github    = [char]::ConvertFromUtf32(0xF09B)
+            Bitbucket = [char]::ConvertFromUtf32(0xF171)
+            GitLab    = [char]::ConvertFromUtf32(0xF296)
         }
     }
-    PromptSymbols                    = @{
-        StartSymbol                      = ' '
-        TruncatedFolderSymbol            = '..'
-        PromptIndicator                  = [char]::ConvertFromUtf32(0x25B6)
-        FailedCommandSymbol              = [char]::ConvertFromUtf32(0x2A2F)
-        ElevatedSymbol                   = [char]::ConvertFromUtf32(0x26A1)
-        SegmentForwardSymbol             = [char]::ConvertFromUtf32(0xE0B0)
-        SegmentBackwardSymbol            = [char]::ConvertFromUtf32(0x26A1)
-        SegmentSeparatorForwardSymbol    = [char]::ConvertFromUtf32(0x26A1)
-        SegmentSeparatorBackwardSymbol   = [char]::ConvertFromUtf32(0x26A1)
-        PathSeparator                    = [System.IO.Path]::DirectorySeparatorChar
-        VirtualEnvSymbol                 = [char]::ConvertFromUtf32(0xE606)
+    PromptSymbols        = @{
+        StartSymbol                    = ' '
+        TruncatedFolderSymbol          = '..'
+        PromptIndicator                = [char]::ConvertFromUtf32(0x25B6)
+        FailedCommandSymbol            = [char]::ConvertFromUtf32(0x2A2F)
+        ElevatedSymbol                 = [char]::ConvertFromUtf32(0x26A1)
+        SegmentForwardSymbol           = [char]::ConvertFromUtf32(0xE0B0)
+        SegmentBackwardSymbol          = [char]::ConvertFromUtf32(0x26A1)
+        SegmentSeparatorForwardSymbol  = [char]::ConvertFromUtf32(0x26A1)
+        SegmentSeparatorBackwardSymbol = [char]::ConvertFromUtf32(0x26A1)
+        PathSeparator                  = [System.IO.Path]::DirectorySeparatorChar
+        VirtualEnvSymbol               = [char]::ConvertFromUtf32(0xE606)
     }
     Colors               = @{
         GitDefaultColor                         = [ConsoleColor]::DarkGreen

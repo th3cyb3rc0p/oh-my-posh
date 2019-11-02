@@ -23,7 +23,7 @@ function Write-Theme {
         $prompt += Write-Prompt -Object "$($sl.PromptSymbols.ElevatedSymbol) " -ForegroundColor $sl.Colors.AdminIconForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
     }
 
-    $user = [System.Environment]::UserName
+    $user = $sl.CurrentUser
     $computer = [System.Environment]::MachineName
     if (Test-NotDefaultUser($user)) {
         $prompt += Write-Prompt -Object "$user@$computer " -ForegroundColor $sl.Colors.SessionInfoForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
@@ -41,7 +41,7 @@ function Write-Theme {
     # Writes the drive portion
     $path = (Get-FullPath -dir $pwd).Replace('\', ' ' + [char]::ConvertFromUtf32(0xE0B1) + ' ') + ' '
     $prompt += Write-Prompt -Object $path -ForegroundColor $sl.Colors.PromptForegroundColor -BackgroundColor $sl.Colors.PromptBackgroundColor
-    
+
     $status = Get-VCSStatus
     if ($status) {
         $themeInfo = Get-VcsInfo -status ($status)

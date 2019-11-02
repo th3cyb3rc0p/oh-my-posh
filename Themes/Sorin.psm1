@@ -18,7 +18,7 @@ function Write-Theme {
         $prompt += Write-Prompt -Object "$($sl.PromptSymbols.ElevatedSymbol) " -ForegroundColor $sl.Colors.AdminIconForegroundColor
     }
 
-    $user = [System.Environment]::UserName
+    $user = $sl.CurrentUser
     if (Test-NotDefaultUser($user)) {
         $prompt += Write-Prompt -Object "$user " -ForegroundColor $sl.Colors.PromptForegroundColor
     }

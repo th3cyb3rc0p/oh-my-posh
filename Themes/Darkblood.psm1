@@ -10,7 +10,7 @@ function Write-Theme {
     )
 
     $prompt = Write-Prompt -Object ([char]::ConvertFromUtf32(0x250C)) -ForegroundColor $sl.Colors.PromptSymbolColor
-    $user = [System.Environment]::UserName
+    $user = $sl.CurrentUser
     $prompt += Write-Segment -content $user -foregroundColor $sl.Colors.PromptForegroundColor
 
     # $prompt += "$($sl.PromptSymbols.SegmentForwardSymbol) "
