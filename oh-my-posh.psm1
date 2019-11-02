@@ -24,13 +24,11 @@ function Set-Prompt {
         Reset-CursorPosition
         $prompt = (Write-Theme -lastCommandFailed $lastCommandFailed)
 
-        if ($env:ConEmuANSI -eq "ON") {
-            $location = Get-Location
-            $folder = (Get-Item $location.Path).Name
-            $prompt += "$([char]27)]2;$($folder)$([char]7)"
-            if ($location.Provider.Name -eq "FileSystem") {
-                $prompt += "$([char]27)]9;9;`"$($location.Path)`"$([char]7)"
-            }
+        $location = Get-Location
+        $folder = (Get-Item $location.Path).Name
+        $prompt += "$([char]27)]2;$($folder)$([char]7)"
+        if ($location.Provider.Name -eq "FileSystem") {
+            $prompt += "$([char]27)]9;9;`"$($location.Path)`"$([char]7)"
         }
 
         $prompt
