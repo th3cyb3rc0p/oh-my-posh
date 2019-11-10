@@ -1,8 +1,16 @@
 # Oh-My-Posh default settings
+function Get-ThemesLocation {
+    $folderName = "PoshThemes"
+    if ($PROFILE) {
+        return (Join-Path (Split-Path -Parent $PROFILE) $folderName)
+    }
+    return "~\${$folderName}"
+}
+
 $global:ThemeSettings = New-Object -TypeName PSObject -Property @{
     CurrentUser          = [System.Environment]::UserName
     CurrentThemeLocation = "$PSScriptRoot\Themes\Agnoster.psm1"
-    MyThemesLocation     = (Join-Path (Split-Path -Parent $PROFILE) "PoshThemes")
+    MyThemesLocation     = Get-ThemesLocation
     ErrorCount           = 0
     GitSymbols           = @{
         BranchSymbol                  = [char]::ConvertFromUtf32(0xE0A0)
