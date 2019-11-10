@@ -68,6 +68,7 @@ $global:ThemeSettings = New-Object -TypeName PSObject -Property @{
         VirtualEnvBackgroundColor               = [ConsoleColor]::Red
     }
     Options = @{
+        ConsoleTitle = $true
         OriginSymbols = $false
     }
 }
