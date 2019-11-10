@@ -27,7 +27,6 @@ $global:ThemeSettings = New-Object -TypeName PSObject -Property @{
         BranchAheadStatusSymbol       = [char]::ConvertFromUtf32(0x2191)
         BranchBehindStatusSymbol      = [char]::ConvertFromUtf32(0x2193)
         OriginSymbols                 = @{
-            Enabled   = $false
             Github    = [char]::ConvertFromUtf32(0xF09B)
             Bitbucket = [char]::ConvertFromUtf32(0xF171)
             GitLab    = [char]::ConvertFromUtf32(0xF296)
@@ -67,6 +66,9 @@ $global:ThemeSettings = New-Object -TypeName PSObject -Property @{
         GitForegroundColor                      = [ConsoleColor]::Black
         VirtualEnvForegroundColor               = [ConsoleColor]::White
         VirtualEnvBackgroundColor               = [ConsoleColor]::Red
+    }
+    Options = @{
+        OriginSymbols = $false
     }
 }
 

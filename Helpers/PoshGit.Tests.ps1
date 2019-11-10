@@ -2,11 +2,13 @@ $global:ThemeSettings = New-Object -TypeName PSObject -Property @{
     GitSymbols                       = @{
         BranchSymbol                  = 'branch'
         OriginSymbols                    = @{
-            Enabled                         = $false
             Github                    = [char]::ConvertFromUtf32(0xF09B)
             Bitbucket                 = [char]::ConvertFromUtf32(0xF171)
             GitLab                    = [char]::ConvertFromUtf32(0xF296)
         }
+    }
+    Options = @{
+        OriginSymbols = $false
     }
 }
 
@@ -18,7 +20,7 @@ $sut = (Split-Path -Leaf $MyInvocation.MyCommand.Path).Replace(".Tests.", ".")
 Describe "Test-GetBranchSymbol" {
     Context "Is disabled" {
         BeforeAll {
-            $global:ThemeSettings.GitSymbols.OriginSymbols.Enabled = $false
+            $global:ThemeSettings.Options.OriginSymbols = $false
         }
         It "Has Enabled set to False" {
             Mock Get-GitRemoteUrl { return 'github.com/test.git' }
@@ -32,7 +34,7 @@ Describe "Test-GetBranchSymbol" {
     }
     Context "Is enabled" {
         BeforeAll {
-            $global:ThemeSettings.GitSymbols.OriginSymbols.Enabled = $true
+            $global:ThemeSettings.Options.OriginSymbols = $true
         }
         It "Uses GitHub" {
             Mock Get-GitRemoteUrl { return 'github.com/test.git' }

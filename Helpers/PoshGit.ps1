@@ -20,7 +20,7 @@ function Get-VCSStatus {
 
 function Get-BranchSymbol($upstream) {
     # Add remote icon instead of branchsymbol if Enabled
-    if (-not ($upstream) -or !$sl.GitSymbols.OriginSymbols.Enabled) {
+    if (-not ($upstream) -or !$sl.Options.OriginSymbols) {
         return $sl.GitSymbols.BranchSymbol
     }
     $originUrl = Get-GitRemoteUrl $upstream
